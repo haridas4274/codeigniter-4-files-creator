@@ -1,7 +1,7 @@
 # 🚀 CodeIgniter 4 Files Creator Extension Pack
 
 **Creating CodeIgniter 4 project files has never been this easy!**  
-This extension helps you instantly generate **Controllers**, **Models**, **Views**, **Services**, and **Routes** directly inside VS Code — no boilerplate, no copy-paste.
+This extension helps you instantly generate **Controllers**, **Models**, **Views**, **Services**, and **Routes** directly inside VS Code — no boilerplate,
 
 ---
 
