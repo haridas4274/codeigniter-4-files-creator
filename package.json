@@ -4,7 +4,7 @@
   "description": "Creating files never been so easy, with the help of Codeigniter 4 Files Creator, you can create auth, crud, model, controller, migration etc with a few clicks.",
   "publisher": "Haridas",
   "icon": "assets/icon.png",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "galleryBanner.color": {
     "color":"#21214c",
     "theme":"dark"
