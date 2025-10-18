@@ -1,0 +1,133 @@
+{
+  "name": "codeigniter-4-files-creator",
+  "displayName": "CI4 Extension Pack",
+  "description": "Creating files never been so easy, with the help of Codeigniter 4 Files Creator, you can create auth, crud, model, controller, migration etc with a few clicks.",
+  "icon": "assets/icon.png",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:make.ci4_view",
+    "onCommand:make.ci4_model",
+    "onCommand:make.ci4_controller",
+    "onCommand:make.ci4_controller_all",
+    "onCommand:make.ci4_service"
+  ],
+  "main": "./out/extension.js",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "CodeIgniter 4 Files Creator Settings",
+      "properties": {
+        "ci4FilesCreator.enableViewNavigation": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable Ctrl+Click navigation to view files in controllers (auto-creates if missing)"
+        },
+        "ci4FilesCreator.fileExtension": {
+          "type": "string",
+          "default": ".php",
+          "description": "Default extension for generated files"
+        },
+        "ci4FilesCreator.defaultFolder": {
+          "type": "string",
+          "default": "app/Views",
+          "description": "Base folder for view files"
+        },
+        "ci4FilesCreator.viewTemplate": {
+          "type": "string",
+          "default": "<h1>Hello, CodeIgniter 4!</h1>\n<p>This is a new view file.</p>",
+          "description": "Default template content for view files (supports multi-line)"
+        },
+        "ci4FilesCreator.authorName": {
+          "type": "string",
+          "default": "Your Name",
+          "description": "Author name to include in file header"
+        },
+        "ci4FilesCreator.controllerTemplate": {
+          "type": "string",
+          "default": "<?php namespace App\\Controllers; ?>",
+          "description,": "Initial content for new CI4 controller files"
+        },
+        "ci4FilesCreator.routeFile": {
+          "type": "string",
+          "default": "app/Config/Routes.php",
+          "description": "Default route file path for CI4 route generator"
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "make.ci4_view",
+        "title": "CI4: Make View File"
+      },
+      {
+        "command": "make.ci4_model",
+        "title": "CI4: Make Model File"
+      },
+      {
+        "command": "make.ci4_controller",
+        "title": "CI4: Make Controller File"
+      },
+      {
+        "command": "make.ci4_controller_all",
+        "title": "CI4: Make Controller - All (Resource)"
+      },
+      {
+        "command": "make.ci4_service",
+        "title": "CI4: Make Service"
+      },
+      {
+        "command": "make.ci4_route_get",
+        "title": "CI4: Route GET"
+      },
+      {
+        "command": "make.ci4_route_post",
+        "title": "CI4: Route POST"
+      },
+      {
+        "command": "ci4.makeRouteGet",
+        "title": "CI4: Route GET"
+      },
+      {
+        "command": "ci4.makeRoutePost",
+        "title": "CI4: Route POST"
+      },
+      {
+        "command": "ci4.makeRoutePut",
+        "title": "CI4: Route PUT"
+      },
+      {
+        "command": "ci4.makeRouteDelete",
+        "title": "CI4: Route DELETE"
+      },
+      {
+        "command": "ci4.makeRoutePatch",
+        "title": "CI4: Route PATCH"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.105.0",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "22.x",
+    "@typescript-eslint/eslint-plugin": "^8.45.0",
+    "@typescript-eslint/parser": "^8.45.0",
+    "eslint": "^9.36.0",
+    "typescript": "^5.9.3",
+    "@vscode/test-cli": "^0.0.11",
+    "@vscode/test-electron": "^2.5.2"
+  }
+}
