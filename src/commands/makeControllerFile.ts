@@ -41,7 +41,7 @@ export async function makeControllerFile() {
         // 🧩 Build namespace
         const namespace =
             parts.length > 0
-                ? `App\\${parts.map(p => capitalize(p)).join('\\')}\\Controllers`
+                ? `App\\Controllers\\${parts.map(p => capitalize(p)).join('\\')}`
                 : 'App\\Controllers';
 
         // 📝 Default content
